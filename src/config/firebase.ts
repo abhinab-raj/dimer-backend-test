@@ -19,7 +19,7 @@ const firebase = admin.initializeApp({
     type: SERVICE_ACCOUNT_TYPE,
     project_id: SERVICE_ACCOUNT_PROJECT_ID,
     private_key_id: SERVICE_ACCOUNT_PRIVATE_KEY_ID,
-    private_key: SERVICE_ACCOUNT_PRIVATE_KEY,
+    private_key: SERVICE_ACCOUNT_PRIVATE_KEY.replace(/\\n/g, '\n'),
     client_email: SERVICE_ACCOUNT_CLIENT_EMAIL,
     client_id: SERVICE_ACCOUNT_CLIENT_ID,
     auth_uri: SERVICE_ACCOUNT_AUTH_URI,
