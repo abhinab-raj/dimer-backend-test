@@ -9,6 +9,7 @@ const UserSchema = new mongoose.Schema<IUser, UserModel>(
     uid: { type: String, default: '' },
     displayName: { type: String },
     photoURL: { type: String, default: '' },
+    customCategory: { type: Array, default: [] },
   },
   { timestamps: true }
 );
@@ -21,6 +22,7 @@ export interface IUser extends Document {
   isAdmin: boolean;
   isVerified: boolean;
   organization: string;
+  customCategory: string[];
   createdAt: string;
   updatedAt: string;
 }
